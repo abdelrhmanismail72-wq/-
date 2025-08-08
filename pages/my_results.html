@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>نتائجي</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .result-box { background: #e0f7fa; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,188,212,0.08);}
+        .correct { color: #388e3c; font-weight: bold; }
+        .wrong { color: #d32f2f; font-weight: bold; }
+        .answer { margin-right: 1rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>نتائج اختباراتك</h2>
+        <div id="results"></div>
+    </div>
+    <script>
+        const quizzes = [
+            {
+                title: "اختبار الدرس الأول",
+                key: "lesson1",
+                questions: [
+                    { q: "ما عاصمة مصر؟", correct: "القاهرة" },
+                    { q: "ما هو أشهر نهر في مصر؟", correct: "النيل" }
+                ]
+            },
+            {
+                title: "اختبار الدرس الثاني",
+                key: "lesson2",
+                questions: [
+                    { q: "ما هو أطول نهر في العالم؟", correct: "النيل" },
+                    { q: "في أي قارة يقع نهر النيل؟", correct: "أفريقيا" },
+                    { q: "أين يصب نهر النيل؟", correct: "البحر المتوسط" }
+                ]
+            },
+            {
+                title: "اختبار الدرس الثالث",
+                key: "lesson3",
+                questions: [
+                    { q: "أين تقع الأهرامات؟", correct: "الجيزة" },
+                    { q: "ما اسم أكبر هرم في الجيزة؟", correct: "خوفو" },
+                    { q: "لماذا بُنيت الأهرامات؟", correct: "كمقابر للفراعنة" }
+                ]
+            }
+        ];
+
+        function renderResults() {
+            let html = "";
+            quizzes.forEach(quiz => {
+                const score = localStorage.getItem(quiz.key + "_score");
+                const answers = JSON.parse(localStorage.getItem(quiz.key + "_answers") || "{}");
+                if (score !== null) {
+                    html += `<div class="result-box"><h3>${quiz.title}</h3>`;
+                    html += `<p>درجتك: ${score}%</p>`;
+                    quiz.questions.forEach((q, idx) => {
+                        const userAns = answers["q" + (idx + 1)] || "لم يجب";
+                        const isCorrect = userAns === q.correct;
+                        html += `<div>
+                            <span class="answer">س${idx + 1}: ${q.q}</span><br>
+                            <span class="${isCorrect ? 'correct' : 'wrong'}">
+                                إجابتك: ${userAns} ${isCorrect ? '✔️' : `❌ (الصحيح: ${q.correct})`}
+                            </span>
+                        </div>`;
+                    });
+                    html += `</div>`;
+                }
+            });
+            document.getElementById("results").innerHTML = html || "<p>لم تقم بأي اختبار بعد.</p>";
+        }
+        renderResults();
+    </script>
+</body>
+</html>

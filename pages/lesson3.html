@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>الدرس الثالث</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .lesson-title { color: #0288d1; text-align: center; margin-bottom: 1.5rem; font-size: 2rem; }
+        .lesson-content { background: linear-gradient(120deg, #e0f7fa 60%, #b2ebf2 100%); padding: 2rem; border-radius: 18px; margin-bottom: 2rem; box-shadow: 0 6px 24px rgba(0,188,212,0.10); text-align: right; font-size: 1.2rem; line-height: 2; color: #01579b; }
+        .finish-btn { display: block; margin: 0 auto; background: linear-gradient(90deg, #00bcd4 60%, #0288d1 100%); color: #fff; border: none; border-radius: 10px; padding: 1rem 2.5rem; font-size: 1.2rem; font-weight: bold; cursor: pointer; box-shadow: 0 4px 16px rgba(0,188,212,0.15); transition: background 0.3s, transform 0.2s; }
+        .finish-btn:hover { background: linear-gradient(90deg, #0288d1 60%, #00bcd4 100%); transform: scale(1.05); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lesson-title">الدرس الثالث: الأهرامات</div>
+        <div class="lesson-content">
+            <p>الأهرامات من عجائب الدنيا السبع القديمة، وتقع في الجيزة بمصر.</p>
+            <ul>
+                <li>بُنيت الأهرامات كمقابر للفراعنة.</li>
+                <li>أشهرها هرم خوفو.</li>
+                <li>تجذب ملايين السياح سنويًا.</li>
+            </ul>
+        </div>
+        <button class="finish-btn" onclick="finishLesson()">أنهيت الدرس</button>
+    </div>
+    <script>
+        function finishLesson() {
+            localStorage.setItem("lesson3_done", "true");
+            window.location.href = "quiz3.html";
+        }
+    </script>
+</body>
+</html>

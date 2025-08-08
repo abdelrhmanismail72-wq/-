@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدرس الأول</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .lesson-content {
+            background: linear-gradient(120deg, #e0f7fa 60%, #b2ebf2 100%);
+            padding: 2rem;
+            border-radius: 18px;
+            margin-bottom: 2rem;
+            box-shadow: 0 6px 24px rgba(0,188,212,0.10);
+            text-align: right;
+            font-size: 1.2rem;
+            line-height: 2;
+            color: #01579b;
+        }
+        .finish-btn {
+            display: block;
+            margin: 0 auto;
+            background: linear-gradient(90deg, #00bcd4 60%, #0288d1 100%);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 1rem 2.5rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(0,188,212,0.15);
+            transition: background 0.3s, transform 0.2s;
+        }
+        .finish-btn:hover {
+            background: linear-gradient(90deg, #0288d1 60%, #00bcd4 100%);
+            transform: scale(1.05);
+        }
+        .lesson-title {
+            color: #0288d1;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 600px) {
+            .lesson-content { font-size: 1rem; }
+            .lesson-title { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lesson-title">الدرس الأول: عاصمة مصر</div>
+        <div class="lesson-content">
+            <p>
+                مصر دولة عربية تقع في شمال أفريقيا، وتُعد القاهرة عاصمتها وأكبر مدنها. تشتهر القاهرة بتاريخها العريق ومعالمها السياحية مثل الأهرامات وأبو الهول ونهر النيل.
+            </p>
+            <ul>
+                <li>القاهرة هي المركز الثقافي والسياسي لمصر.</li>
+                <li>تأسست منذ أكثر من ألف عام.</li>
+                <li>تضم العديد من الجامعات والمتاحف.</li>
+            </ul>
+        </div>
+        <button class="finish-btn" onclick="finishLesson()">أنهيت الدرس</button>
+    </div>
+    <script>
+        function finishLesson() {
+            localStorage.setItem("lesson1_done", "true");
+            window.location.href = "quiz.html";
+        }
+    </script>
+</body>
+</html>

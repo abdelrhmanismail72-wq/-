@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>اختبار الدرس الأول</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .question { margin-bottom: 1.5rem; }
+        #result { margin-top: 2rem; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>اختبار الدرس الأول</h2>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. ما عاصمة مصر؟</p>
+                <label><input type="radio" name="q1" value="القاهرة"> القاهرة</label><br>
+                <label><input type="radio" name="q1" value="الإسكندرية"> الإسكندرية</label><br>
+                <label><input type="radio" name="q1" value="المنصورة"> المنصورة</label>
+            </div>
+            <div class="question">
+                <p>2. ما هو أشهر نهر في مصر؟</p>
+                <label><input type="radio" name="q2" value="النيل"> النيل</label><br>
+                <label><input type="radio" name="q2" value="الأمازون"> الأمازون</label><br>
+                <label><input type="radio" name="q2" value="الفرات"> الفرات</label>
+            </div>
+            <button type="button" onclick="submitQuiz()">إنهاء الاختبار</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="js/quiz.js"></script>
+</body>
+</html>

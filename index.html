@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h2>منصة التعليم</h2>
+            <div id="form-toggle">
+                <button onclick="toggleForm('login')">دخول</button>
+                <button onclick="toggleForm('register')">تسجيل</button>
+            </div>
+            <form id="login-form">
+                <input type="text" id="login-username" placeholder="اسم المستخدم" required>
+                <input type="password" id="login-password" placeholder="كلمة المرور" required>
+                <button type="button" onclick="login()">دخول</button>
+            </form>
+            <form id="register-form" style="display:none;">
+                <input type="text" id="register-username" placeholder="اسم المستخدم" required>
+                <input type="password" id="register-password" placeholder="كلمة المرور" required>
+                <button type="button" onclick="register()">تسجيل</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+</html>

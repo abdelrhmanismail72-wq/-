@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>اختبار الدرس الثاني</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .question { margin-bottom: 1.5rem; }
+        #result { margin-top: 2rem; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>اختبار الدرس الثاني</h2>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. ما هو أطول نهر في العالم؟</p>
+                <label><input type="radio" name="q1" value="النيل"> النيل</label><br>
+                <label><input type="radio" name="q1" value="الأمازون"> الأمازون</label><br>
+                <label><input type="radio" name="q1" value="الفرات"> الفرات</label>
+            </div>
+            <div class="question">
+                <p>2. في أي قارة يقع نهر النيل؟</p>
+                <label><input type="radio" name="q2" value="أفريقيا"> أفريقيا</label><br>
+                <label><input type="radio" name="q2" value="آسيا"> آسيا</label><br>
+                <label><input type="radio" name="q2" value="أوروبا"> أوروبا</label>
+            </div>
+            <div class="question">
+                <p>3. أين يصب نهر النيل؟</p>
+                <label><input type="radio" name="q3" value="البحر المتوسط"> البحر المتوسط</label><br>
+                <label><input type="radio" name="q3" value="المحيط الأطلسي"> المحيط الأطلسي</label><br>
+                <label><input type="radio" name="q3" value="البحر الأحمر"> البحر الأحمر</label>
+            </div>
+            <button type="button" onclick="submitQuiz2()">إنهاء الاختبار</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="js/quiz2.js"></script>
+</body>
+</html>

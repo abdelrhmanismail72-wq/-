@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>اختبار الدرس الثالث</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .question { margin-bottom: 1.5rem; }
+        #result { margin-top: 2rem; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>اختبار الدرس الثالث</h2>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. أين تقع الأهرامات؟</p>
+                <label><input type="radio" name="q1" value="الجيزة"> الجيزة</label><br>
+                <label><input type="radio" name="q1" value="الأقصر"> الأقصر</label><br>
+                <label><input type="radio" name="q1" value="أسوان"> أسوان</label>
+            </div>
+            <div class="question">
+                <p>2. ما اسم أكبر هرم في الجيزة؟</p>
+                <label><input type="radio" name="q2" value="خوفو"> خوفو</label><br>
+                <label><input type="radio" name="q2" value="خفرع"> خفرع</label><br>
+                <label><input type="radio" name="q2" value="منقرع"> منقرع</label>
+            </div>
+            <div class="question">
+                <p>3. لماذا بُنيت الأهرامات؟</p>
+                <label><input type="radio" name="q3" value="كمقابر للفراعنة"> كمقابر للفراعنة</label><br>
+                <label><input type="radio" name="q3" value="كسجون"> كسجون</label><br>
+                <label><input type="radio" name="q3" value="كقلاع حربية"> كقلاع حربية</label>
+            </div>
+            <button type="button" onclick="submitQuiz3()">إنهاء الاختبار</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="js/quiz3.js"></script>
+</body>
+</html>
